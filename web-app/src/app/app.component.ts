@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppConfig } from './config/app-config';
 
 @Component({
   selector: 'webapp-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'web-app';
+  constructor(private appConfig: AppConfig){
+    this.title = appConfig.title;
+
+    console.log(appConfig.title);
+    console.log(appConfig.baseUrl);
+  }
 }
