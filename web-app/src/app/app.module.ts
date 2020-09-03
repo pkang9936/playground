@@ -8,7 +8,11 @@ import {JsonAppConfigService} from './config/json-app-config.service';
 import { AppConfig } from './config/app-config';
 import { CustomerComponent } from './customer/customer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MaterialModule} from './shared/material.module';
 
+import {ContactmanagerModule} from './contactmanager/contactmanager.module';
 export function initializerFn(jsonAppConfigService: JsonAppConfigService) {
   return () => {
     return jsonAppConfigService.load();
@@ -19,12 +23,17 @@ export function initializerFn(jsonAppConfigService: JsonAppConfigService) {
   declarations: [
     AppComponent,
     CustomerComponent,
-    DashboardComponent
+    DashboardComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    
+    ContactmanagerModule
   ],
   providers: [
     {
