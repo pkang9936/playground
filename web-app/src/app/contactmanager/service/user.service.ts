@@ -7,8 +7,8 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-  //SERVER_URL: string = "api"; 
-  SERVER_URL: string = 'https://angular-material-api.azurewebsites.net/users';
+  SERVER_URL: string = "api";
+  //SERVER_URL: string = 'https://angular-material-api.azurewebsites.net/users';
 
 
   private _users: BehaviorSubject<User[]>;
