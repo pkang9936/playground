@@ -17,6 +17,7 @@ export class SidenavComponent implements OnInit {
 
   public users: Observable<User[]>;
   @ViewChild(MatSidenav) sidenav: MatSidenav;
+  public isDarkTheme: boolean = true;
 
   constructor(
     zone: NgZone,
@@ -39,5 +40,8 @@ export class SidenavComponent implements OnInit {
   }
   isScreenSmall() :boolean {
     return this.mediaMatcher.matches;
+  }
+  toggleTheme() {
+    this.isDarkTheme = !this.isDarkTheme;
   }
 }
