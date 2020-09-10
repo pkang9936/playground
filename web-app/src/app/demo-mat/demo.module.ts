@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FlexLayoutModule} from '@angular/flex-layout';
 import { DemoRoutingModule } from './demo-routing.module';
 import { ButtonsComponent } from './buttons.component';
-import { MaterialModule } from '../shared/material.module';
+import { MaterialModule } from '../shared/material/material.module';
 import { FlexboxComponent } from './flexbox.component';
 
 

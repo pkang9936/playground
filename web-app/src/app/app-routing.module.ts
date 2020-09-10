@@ -12,6 +12,10 @@ const routes: Routes = [
     import('./demo-mat/demo.module').then(m => m.DemoModule)
 
   },
+  {
+    path: 'caverock', loadChildren: () =>
+    import('./bootstrap/cave-rock/cave-rock.module').then(m => m.CaveRockModule)
+  },
   {path:'contactmanager', loadChildren: './contactmanager/contactmanager.module#ContactmanagerModule'},
   { path: '**', component: PageNotFoundComponent}
 ];

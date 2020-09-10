@@ -10,9 +10,10 @@ import { CustomerComponent } from './customer/customer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MaterialModule} from './shared/material.module';
+import {MaterialModule} from './shared/material/material.module';
 
 import {ContactmanagerModule} from './contactmanager/contactmanager.module';
+import { NavComponent } from './shared/components/nav/nav.component';
 export function initializerFn(jsonAppConfigService: JsonAppConfigService) {
   return () => {
     return jsonAppConfigService.load();
@@ -25,6 +26,7 @@ export function initializerFn(jsonAppConfigService: JsonAppConfigService) {
     CustomerComponent,
     DashboardComponent,
     PageNotFoundComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,7 @@ export function initializerFn(jsonAppConfigService: JsonAppConfigService) {
     HttpClientModule,
     BrowserAnimationsModule,
     MaterialModule,
-    
+
     ContactmanagerModule
   ],
   providers: [
